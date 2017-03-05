@@ -21,5 +21,17 @@ namespace Rmiac
         {
             Application.Exit();
         }
+
+        private void перейтиКРедактированиюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Contacts form = new Contacts();
+            form.Show();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

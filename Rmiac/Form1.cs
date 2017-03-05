@@ -16,5 +16,10 @@ namespace Rmiac
         {
             InitializeComponent();
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

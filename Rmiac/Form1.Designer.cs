@@ -36,22 +36,22 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.noteBookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.noteBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBDataSet = new Rmiac.DBDataSet();
-            this.noteBookBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.noteBookTableAdapter = new Rmiac.DBDataSetTableAdapters.NoteBookTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteBookBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dBDataSet = new Rmiac.DBDataSet();
+            this.noteBookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.noteBookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.noteBookTableAdapter = new Rmiac.DBDataSetTableAdapters.NoteBookTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,14 +93,14 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(25, 20);
-            this.toolStripMenuItem1.Text = "1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(59, 20);
+            this.toolStripMenuItem1.Text = "Записи";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem3.Text = "1";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(166, 22);
+            this.toolStripMenuItem3.Text = "Добавить запись";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // dataGridView1
@@ -119,20 +119,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(867, 265);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // dBDataSet
-            // 
-            this.dBDataSet.DataSetName = "DBDataSet";
-            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // noteBookBindingSource2
-            // 
-            this.noteBookBindingSource2.DataMember = "NoteBook";
-            this.noteBookBindingSource2.DataSource = this.dBDataSet;
-            // 
-            // noteBookTableAdapter
-            // 
-            this.noteBookTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -164,6 +150,20 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "phone";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // noteBookBindingSource2
+            // 
+            this.noteBookBindingSource2.DataMember = "NoteBook";
+            this.noteBookBindingSource2.DataSource = this.dBDataSet;
+            // 
+            // dBDataSet
+            // 
+            this.dBDataSet.DataSetName = "DBDataSet";
+            this.dBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // noteBookTableAdapter
+            // 
+            this.noteBookTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,10 +180,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.noteBookBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

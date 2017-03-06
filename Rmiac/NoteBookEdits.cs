@@ -27,7 +27,7 @@ namespace Rmiac
         private void button1_Click(object sender, EventArgs e)
         {
             string date = calendar.SelectionEnd.Date.ToString();
-            date = date.Substring(date.IndexOf(' '));
+            date = date.Remove(date.IndexOf(' '));
             if(tbTheme.Text != "" && rtbText.Text != "")
             {
                 string connStr = "Data Source=localhost;Initial Catalog=DB;Integrated Security=True";
@@ -50,29 +50,28 @@ namespace Rmiac
 
                 SqlParameter param = new SqlParameter();
                 param.ParameterName = "@theme";
-                param.Value = "Новая провер";
+                param.Value = tbTheme.Text;
                 param.SqlDbType = SqlDbType.NVarChar;
                 cmd.Parameters.Add(param);
 
                 param = new SqlParameter();
                 param.ParameterName = "@text";
-                param.Value = "Иванов И";
+                param.Value = rtbText.Text;
                 param.SqlDbType = SqlDbType.NVarChar;
                 cmd.Parameters.Add(param);
 
                 param = new SqlParameter();
                 param.ParameterName = "@date";
-                param.Value = "06.03.2017";
+                param.Value = date;
                 param.SqlDbType = SqlDbType.Date;
                 cmd.Parameters.Add(param);
 
                 param = new SqlParameter();
                 param.ParameterName = "@phone";
-                param.Value = "123456";
+                param.Value = tbPhone.Text;
                 param.SqlDbType = SqlDbType.NChar;
                 cmd.Parameters.Add(param);
 
-                Console.WriteLine("Вставляем запись");
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -87,6 +86,10 @@ namespace Rmiac
 
                 conn.Close();
                 conn.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Введены не все данные");
             }
         }
     }

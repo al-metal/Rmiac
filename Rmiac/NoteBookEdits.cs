@@ -82,8 +82,6 @@ namespace Rmiac
                     return;
                 }
 
-                cmd = new SqlCommand("Select * From Students", conn);
-
                 conn.Close();
                 conn.Dispose();
             }

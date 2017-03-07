@@ -84,6 +84,12 @@
     <Compile Include="NoteBookEdits.Designer.cs">
       <DependentUpon>NoteBookEdits.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoteBookUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoteBookUpdate.Designer.cs">
+      <DependentUpon>NoteBookUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Contacts.resx">
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NoteBookEdits.resx">
       <DependentUpon>NoteBookEdits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteBookUpdate.resx">
+      <DependentUpon>NoteBookUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

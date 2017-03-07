@@ -47,5 +47,14 @@ namespace Rmiac
             NoteBookEdits forms = new NoteBookEdits();
             forms.Show();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
+            this.Hide();
+            NoteBookUpdate forms = new NoteBookUpdate(id);
+            forms.Show();
+        }
     }
 }

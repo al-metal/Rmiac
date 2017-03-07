@@ -33,7 +33,6 @@
             this.rtbText = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.calendar = new System.Windows.Forms.MonthCalendar();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbTheme = new System.Windows.Forms.TextBox();
             this.btnUpdateDB = new System.Windows.Forms.Button();
@@ -78,15 +77,6 @@
             this.calendar.Name = "calendar";
             this.calendar.TabIndex = 14;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Тема";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -123,7 +113,6 @@
             this.Controls.Add(this.rtbText);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.calendar);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbTheme);
             this.Controls.Add(this.btnUpdateDB);
@@ -131,6 +120,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Обновление записи";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoteBookUpdate_FormClosing);
+            this.Load += new System.EventHandler(this.NoteBookUpdate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +133,6 @@
         private System.Windows.Forms.RichTextBox rtbText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MonthCalendar calendar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbTheme;
         private System.Windows.Forms.Button btnUpdateDB;
